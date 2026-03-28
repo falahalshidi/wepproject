@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site preview</title>
+    <link rel="stylesheet" href="css/preview.css" />
+  </head>
+  <body>
+    <div class="preview-app">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <a class="back-link" href="index.html">← Edit idea</a>
+        </div>
+        <div class="idea-block">
+          <h2>Your idea</h2>
+          <p class="idea-text" id="ideaDisplay"></p>
+          <p class="template-name" id="templateDisplay"></p>
+        </div>
+        <p class="match-banner" id="noMatchBanner" hidden>
+          No strong keyword match — showing a generic template. Try a clearer
+          description or pick a quick-start card on the home page.
+        </p>
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <button
+              type="button"
+              class="tab-btn"
+              data-tab="html"
+              aria-selected="true"
+            >
+              HTML
+            </button>
+            <button type="button" class="tab-btn" data-tab="css" aria-selected="false">
+              CSS
+            </button>
+            <button type="button" class="tab-btn" data-tab="js" aria-selected="false">
+              JavaScript
+            </button>
+            <button type="button" class="copy-btn" id="copyCodeBtn">Copy</button>
+          </div>
+          <pre class="code-pre" id="panel-html"><code id="codeHtml"></code></pre>
+          <pre class="code-pre" id="panel-css" hidden><code id="codeCss"></code></pre>
+          <pre class="code-pre" id="panel-js" hidden><code id="codeJs"></code></pre>
+        </div>
+      </aside>
+
+      <main class="main-stage">
+        <div class="stage-toolbar">
+          <span>Preview size</span>
+          <div class="viewport-btns" role="group" aria-label="Viewport width">
+            <button type="button" data-viewport="large" aria-pressed="true">
+              Large (~1280)
+            </button>
+            <button type="button" data-viewport="medium" aria-pressed="false">
+              Medium (~768)
+            </button>
+            <button type="button" data-viewport="small" aria-pressed="false">
+              Small (~375)
+            </button>
+          </div>
+        </div>
+        <div class="iframe-outer">
+          <div class="iframe-shell" id="iframeShell">
+            <iframe id="previewFrame" title="Generated site preview"></iframe>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/templates.js"></script>
+    <script src="js/matcher.js"></script>
+    <script src="js/preview.js"></script>
+  </body>
+</html>

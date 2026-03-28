@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idea to site</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1 class="hero-title">Turn your idea into a site</h1>
+        <p class="hero-sub">
+          Describe what you want in plain language, then generate. We pick a
+          ready-made template that fits — no AI, everything runs locally in your
+          browser.
+        </p>
+      </header>
+
+      <section class="input-section" aria-labelledby="idea-label">
+        <label id="idea-label" for="ideaInput">Your idea</label>
+        <textarea
+          id="ideaInput"
+          class="idea-input"
+          placeholder="Example: I need a simple accounting page with invoices..."
+          rows="5"
+        ></textarea>
+        <div class="actions-row">
+          <button type="button" class="btn btn-primary" id="generateBtn">
+            Generate site
+          </button>
+          <p class="hint">You’ll go to the preview and code page next.</p>
+        </div>
+      </section>
+
+      <h2 class="templates-heading">Quick-start ideas</h2>
+      <div class="template-grid" id="templateCards"></div>
+    </div>
+
+    <script src="js/templates.js"></script>
+    <script src="js/matcher.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

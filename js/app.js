@@ -76,9 +76,7 @@
       sessionStorage.setItem(STORAGE_IDEA, idea);
       sessionStorage.setItem(STORAGE_TEMPLATE, result.template.id);
       sessionStorage.setItem(STORAGE_MATCHED, result.matched ? "1" : "0");
-    } catch (e) {
-      /* storage may be blocked — URL still carries state */
-    }
+    } catch (e) {}
     var q = new URLSearchParams();
     q.set("id", result.template.id);
     q.set("m", result.matched ? "1" : "0");
